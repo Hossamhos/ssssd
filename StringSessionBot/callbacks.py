@@ -48,7 +48,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
     elif query.startswith("pyrogram") or query.startswith("telethon"):
         try:
             if query == "pyrogram":
-                await callback_query.answer("Please note that the new type of string sessions may not work in all bots, i.e, only the bots that have been updated to pyrogram v2 will work!", show_alert=True)
+                await callback_query.answer("يرجى ملاحظة أن النوع الجديد من جلسات السلسلة قد لا يعمل في جميع الروبوتات ، أي فقط الروبوتات التي تم تحديثها إلى Pyrogram V2 ستعمل!", show_alert=True)
                 await generate_session(bot, callback_query.message)
             elif query == "pyrogram1":
                 await callback_query.answer()
@@ -67,7 +67,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             await callback_query.message.reply(ERROR_MESSAGE.format(str(e)))
 
 
-ERROR_MESSAGE = "Oops! An exception occurred! \n\n**Error** : {} " \
-            "\n\nPlease visit @StarkBotsChat if this message doesn't contain any " \
-            "sensitive information and you if want to report this as " \
-            "this error message is not being logged by us!"
+ERROR_MESSAGE = "- عـذراً حدث خطأ ! \n\n**خطأ !** : {} " \
+            "\n\n- يرجى ابلاغي اذا كان هناك خطأ @H_OS_S_AM " \
+            "معلومات حساسة وأنت إذا كنت تريد الإبلاغ عن هذا كـ" \
+            "لم يتم تسجيل رسالة الخطأ هذه بواسطتنا!"
